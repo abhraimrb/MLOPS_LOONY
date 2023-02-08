@@ -11,12 +11,12 @@ def init():
     # AZUREML_MODEL_DIR is an environment variable created during deployment.
     # It is the path to the model folder (./azureml-models/$MODEL_NAME/$VERSION)
     # For multiple models, it points to the folder containing all deployed models (./azureml-models)
-    model_path = os.path.join(os.getenv('AZUREML_MODEL_DIR'), 'sklearn_diabetes_model.pkl')
+    model_path = os.path.join(os.getenv('AZUREML_MODEL_DIR'), 'sklearn_insurance_claim_prediction_model.pk')
     # Deserialize the model file back into a sklearn model.
     model = joblib.load(model_path)
 
-input_sample = np.array([[10.0, 9.0, 8.0, 7.0, 6.0, 5.0, 4.0, 3.0, 2.0, 1.0]])
-output_sample = np.array([3726.995])
+input_sample = np.array([[56, 1, 39.82, 0, 0, 2, 11090.7178]])
+output_sample = np.array([1])
 
 @input_schema('data', NumpyParameterType(input_sample))
 @output_schema(NumpyParameterType(output_sample))
