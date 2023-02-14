@@ -1,0 +1,7 @@
+{
+    "training":
+    {"n_estimators": 50,
+     "criterion": "gini",
+     "max_depth": 8
+    }
+}
