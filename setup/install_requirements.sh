@@ -1,4 +1,3 @@
-#!/bin/bash
 python --version
 pip install --upgrade azureml-sdk
 pip install -r requirements.txt
